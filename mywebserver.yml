@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: RedHat
   become: yes
   tasks:
   - name: install web server only on RedHat nodes
