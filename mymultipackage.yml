@@ -4,10 +4,10 @@
   tasks:
   - name: i want to install git, tree and wget by using single tasks
     apt:
-     name: "{{ item }}"
-     state: present
+      name: "{{ item }}"
+      state: present
     loop:
-     - git
-     - tree
-     - wget
+      - git
+      - tree
+      - wget
   
