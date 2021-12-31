@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-  - name: i want to install git, tree and wget by using single tasks
+  - name: i want to install git,tree and wget by using single task
     apt:
       name: "{{ item }}"
       state: present
