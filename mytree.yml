@@ -3,7 +3,7 @@
   become: yes
   tasks:
    - name: i wnat to install tree only on RedHat nodes
-     apt:
+     yum:
       name: tree
       state: present
      when: ansible_os_family=="RedHat"
