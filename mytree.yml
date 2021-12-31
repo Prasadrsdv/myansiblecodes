@@ -2,8 +2,9 @@
 - hosts: all
   become: yes
   tasks:
-   - name: i wnat to install tree
+   - name: i wnat to install tree only on RedHat nodes
      apt:
       name: tree
       state: present
+     when: ansible_os_family=="RedHat"
 
