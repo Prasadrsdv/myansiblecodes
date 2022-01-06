@@ -11,6 +11,3 @@
 172.31.89.98
 
 
-[mywebservers:vars]
-mywebserverforubuntu=apache2
-mywebserverforredhat=httpd
