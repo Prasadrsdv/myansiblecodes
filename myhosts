@@ -1,6 +1,16 @@
+[mywebservers]
+172.31.94.241
+172.31.81.182
+172.31.89.98
+
 [RedHat]
 172.31.94.241
 172.31.81.182
 
 [ubuntu]
 172.31.89.98
+
+
+[mywebservers:vars]
+mywebserverforubuntu=apache2
+mywebserverforredhat=httpd

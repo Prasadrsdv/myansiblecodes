@@ -1,15 +1,27 @@
 ---
-- hosts: RedHat
+- hosts: mywebservers
   become: yes
   tasks:
   - name: install web server only on RedHat nodes
     yum:
-     name: httpd
+     name: "{{mywebserverforredhat}}"
      state: present
     when: ansible_os_family=="RedHat"
 
   - name: start web server only on RedHat nodes
     service:
-     name: httpd
+     name: "{{mywebserverforredhat}}"
      state: started
     when: ansible_os_family=="RedHat"
+  
+  - name: install web server only on ubuntu nodes
+    apt:
+     name: "{{mywebserverforubuntu}}"
+     state: present
+    when: ansible_os_family=="Debian"
+
+  - name: start web server only on ubuntu nodes
+    service:
+     name: "{{mywebserverforubuntu}}"
+     state: started
+    when: ansible_os_family=="Debian"
