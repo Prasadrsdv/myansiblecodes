@@ -11,6 +11,7 @@
      yum:
       name: tree
       stateeee: present
+     ignore_errors: yes
 
    - name: i wnat to install wget
      yum:
