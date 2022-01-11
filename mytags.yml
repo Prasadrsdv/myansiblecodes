@@ -3,19 +3,19 @@
   become: yes
   tasks:
    - name: i wnat to install git
-     apt:
+     yum:
       name: git
       state: present
      tags: mygit
 
    - name: i wnat to install tree
-     apt:
+     yum:
       name: tree
       state: present
      tags: mytree
 
    - name: i wnat to install wget
-     apt:
+     yum:
       name: wget
       state: present
      tags: mywget
