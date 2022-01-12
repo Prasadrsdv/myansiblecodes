@@ -10,15 +10,15 @@
 
   - name: i want to copy indexfile into node side
     template:
-      src: myindex.j2
-      dest: /var/www/html/index.html
+        src: myindex.j2
+        dest: /var/www/html/index.html
     notify:
      - restartwebserver
 
   - name: i want to create directory
     file:
-     path: /home/ubuntu/myfolder
-     state: directory
+        path: /home/ubuntu/myfolder
+        state: directory
     notify:
      - restartwebserver
 
