@@ -11,7 +11,17 @@
     template:
       src: myindex.j2
       dest: /var/www/html/index.html
+    notify:
+    - restartwebserver
+    
   - name: i want to create directory
     file:
      path: /home/ubuntu/myfolder
      state: directory
+
+
+  handlers:
+  - name: restartwebserver
+    service:
+     name: apache2
+     state: restarted
