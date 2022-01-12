@@ -11,7 +11,7 @@
     template:
       src: myindex.j2
       dest: /var/www/html/index.html
-  - name: create a folder
-    folder:
+  - name: i want to create directory
+    file:
     path: /home/ubuntu/myfolder
     state: directory
