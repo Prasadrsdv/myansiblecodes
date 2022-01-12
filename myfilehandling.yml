@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.89.98
+  become: yes
+  tasks:
+  - include_tasks: myfile.yml
+  - name: install webserver
+    apt:
+     name: apache2
+     state: present
+  - name: i want to copy indexfile into node side
+    template:
+      src: myindex.j2
+      dest: /var/www/html/index.html
