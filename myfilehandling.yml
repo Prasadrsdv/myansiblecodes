@@ -13,5 +13,5 @@
       dest: /var/www/html/index.html
   - name: i want to create directory
     file:
-    path: /home/ubuntu/myfolder
-    state: directory
+     path: /home/ubuntu/myfolder
+     state: directory
