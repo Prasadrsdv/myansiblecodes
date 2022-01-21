@@ -1,0 +1,6 @@
+---
+- name: deploy jenkins as java application
+  get_url:
+    url: https://get.jenkins.io/war-stable/2.319.2/jenkins.war
+    dest: /opt/tomcat/webapps/
+    force_basic_auth: yes
