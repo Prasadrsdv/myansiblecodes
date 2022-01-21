@@ -1,6 +1,6 @@
 ---
 - name: copy tomcat user file into nodes
-  tempplate:
+  template:
     src: templates/mytomuser.j2
     dest: /opt/tomcat/conf/tomcat-users.xml
 
